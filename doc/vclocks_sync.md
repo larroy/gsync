@@ -4,7 +4,9 @@
 
 ## Abstract
 
-A method is proposed to detect concurrent changes, conflicts and causality violations in a large set of data files or key-value pairs which are shared and synchronized across a cluster of compute nodes in which the wall clock is not necesarily synchronized. The method proposed also guarantees that on reconnection only the list of files or keys that have changed since the last synchronization is transmitted.
+A method is proposed to detect concurrent changes, conflicts and causality violations in a large set
+of data files or key-value pairs which are shared and synchronized across a cluster of compute nodes
+in which the wall clock is not necessarily synchronized. The method proposed also guarantees that on reconnection only the list of files or keys that have changed since the last synchronization is transmitted.
 
 ## Introduction
 
@@ -62,7 +64,7 @@ The *repository update clock* `RUC` is a one dimensional vector keyed by *node i
 
 When node `A` has ``RUC(A) = {A: 2, B: 4}`` it means that the last changes it knows about are `A`, at *repository revision* 2 and `B` at *repository revision* 4.
 
-To request the updates from node `B`, it sends `RUC(A)` which then `B` compares to its own `RUC(B) = {A: 2, B: 7, C: 3}` now `B` knows that it needs to send the files that where last changed by `B` and `LCR > 4`, and the ones last changed by `C`.
+To request the updates from node `B`, it sends `RUC(A)` which then `B` compares to its own `RUC(B) = {A: 2, B: 7, C: 3}` now `B` knows that it needs to send the files that were last changed by `B` and `LCR > 4`, and the ones last changed by `C`.
 
 The result of this is that only the list of files that were changed and its vector clocks needs to be sent, instead of the full list.
 

@@ -75,5 +75,6 @@ I would like to acknowledge the input and ideas of Steven Jewel.
 
 ## References
 
-[vector clock]: http://en.wikipedia.org/wiki/Vector_clock
-[Amazon's dynamo]: http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
+[vector clock](http://en.wikipedia.org/wiki/Vector_clock)
+
+[Amazon's dynamo](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
